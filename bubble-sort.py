@@ -3,24 +3,15 @@
 x = [20, 5, 6, 7, 9, 10, 100, 30, 4, 0, 999, -5]
 
 def sort (a):
-    
     l = len(a)
-    
     for j in range(l):
-    
         for i in range(l - j):
-
             #find the min
-
             min2_index = minn(a[i : l - j])
             a = swap(i, min2_index + i, a)
-            
-
             #find the max
-
             max2_index = maxx(a[i : l - j])
             a = swap(l - j - 1, max2_index + i, a)
-            
     return a
     
 
