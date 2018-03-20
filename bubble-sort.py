@@ -12,7 +12,7 @@ def sort (a):
             min_index = minn(a[i : l - j])
             #swapping with i and min_index+i - because desired location for min is i and current min is minindex + i
             a = swap(i, min_index + i, a)
-            #find the max & swap in the original
+            #find the max & swap in the original array
             #but finding the max index only within cutoff portion [i:l-j]
             max_index = maxx(a[i : l - j])
             #swapping with l - j - 1 and max_index+i - because desired location for max is l - j - 1 and current max is maxindex + i
