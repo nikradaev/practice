@@ -1,3 +1,5 @@
+#Buble sort array algorithm function
+
 x = [20, 5, 6, 7, 9, 10, 100, 30, 4, 0, 999, -5]
 
 def sort (a):
