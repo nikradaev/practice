@@ -9,39 +9,38 @@ def sort (a):
         for i in range(l - j):
             #find the min & swap in the original array
             #but finding the min index only within cutoff portion [i:l-j]
-            min2_index = minn(a[i : l - j])
+            min_index = minn(a[i : l - j])
             #swapping with i and min_index+i - because desired location for min is i and current min is minindex + i
-            a = swap(i, min2_index + i, a)
+            a = swap(i, min_index + i, a)
             #find the max & swap in the original
             #but finding the max index only within cutoff portion [i:l-j]
-            max2_index = maxx(a[i : l - j])
+            max_index = maxx(a[i : l - j])
             #swapping with l - j - 1 and max_index+i - because desired location for max is l - j - 1 and current max is maxindex + i
-            a = swap(l - j - 1, max2_index + i, a)
+            a = swap(l - j - 1, max_index + i, a)
     return a
     
 def minn(a):
-    min1 = a[0]
+    min_value = a[0]
     min_index = 0
     for x in range(len(a)):
-        if a[x] < min1:
-            min1 = a[x]
+        if a[x] < min_value:
+            min_value = a[x]
             min_index = x
     return min_index
 
 def maxx(a):
-    max1 = a[0]
+    max_value = a[0]
     max_index = 0
     for x in range(len(a)):
-        if a[x] > max1:
-            max1 = a[x]
+        if a[x] > max_value:
+            max_value = a[x]
             max_index = x
     return max_index
 
-def swap(i1, i2, arr):
-    temp = arr[i1]
-    arr[i1] = arr[i2]
-    arr[i2] = temp
-    
+def swap(index1, index2, arr):
+    temp = arr[index1]
+    arr[index1] = arr[index2]
+    arr[index2] = temp
     return arr
     
 x = sort(x)
