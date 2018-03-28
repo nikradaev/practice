@@ -1,0 +1,29 @@
+#!/bin/python3
+#Print a single base-10 integer denoting the maximum number of consecutive 's in the binary representation of n.
+
+import sys
+
+
+n = int(input().strip())
+number = n
+
+remar = []
+counter = 0
+
+while n > 0:
+    rem = n % 2
+    n = n//2
+    remar.append(rem)
+
+globmax = 0
+localmax = 0
+
+for x in range(len(remar)):
+    if remar[x] == 1:
+        localmax += 1
+    else:
+        localmax = 0
+    if localmax > globmax:
+        globmax = localmax
+
+print(globmax)
