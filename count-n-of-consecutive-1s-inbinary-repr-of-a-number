@@ -1,5 +1,5 @@
 #!/bin/python3
-#Print a single base-10 integer denoting the maximum number of consecutive 's in the binary representation of n.
+#Print a single base-10 integer denoting the maximum number of consecutive 1's in the binary representation of n.
 
 import sys
 
