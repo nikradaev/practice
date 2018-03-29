@@ -1,0 +1,20 @@
+#!/bin/python3
+
+import sys
+
+
+arr = []
+for arr_i in range(6):
+    arr_t = [int(arr_temp) for arr_temp in input().strip().split(' ')]
+    arr.append(arr_t)
+
+globalSumHourglass = 0
+localSumHourglass = 0
+
+for x in range(len(arr) - 2):
+    for y in range(len(arr[x]) - 2):
+        localSumHourglass = arr[y][x]+arr[y][x+1]+arr[y][x+2]+arr[y+1][x+1]+arr[y+2][x]+arr[y+2][x+1]+arr[y+2][x+2]
+        if localSumHourglass > globalSumHourglass:
+            globalSumHourglass = localSumHourglass
+        
+print(globalSumHourglass)
