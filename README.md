@@ -1,4 +1,4 @@
 # practice
 
 
-Various code used as practice, interviews, testing, etc.
+Various code used as practice, interviews, testing, curiosity, etc.
